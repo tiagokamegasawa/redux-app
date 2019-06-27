@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {clickButton} from './actions';
+import {Header} from './header';
 
 import './App.css';
 
@@ -25,7 +26,7 @@ class App extends Component {
         <button onClick={() => clickButton(inputValue)}>
           Click me!
         </button>
-        <h1>{newValue}</h1>
+        <Header content={newValue} />
       </div>
     );
   }
